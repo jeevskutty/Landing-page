@@ -76,6 +76,12 @@ body, html {
     padding: 12px 24px;
     gap: 8px;
   }
+  .contact-color:hover{
+    background-color: #d7d4e4;
+    border-radius: 40px;
+    padding: 12px 24px;
+    gap: 8px;
+  }
   
   .navbar .contact-button:hover {
     background-color: #372C70;
