@@ -91,14 +91,19 @@ body, html {
   .appartment{
     max-width: 1920px;
     justify-self: center;
+    animation: appear 5s linear;
   }
   .key{
     max-width: 1920px;
     justify-self: center;
+    animation: appear 5s linear;
+   
   }
   .why-invest{
     justify-self: center;
     width: 1078px;
+    animation: appear 5s linear;
+    
         
   }
   .why{
@@ -112,6 +117,7 @@ body, html {
     background: linear-gradient(90deg, #372C70 -1.68%, #5441AD 100.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 
   }
   .morem{
@@ -130,6 +136,7 @@ body, html {
     justify-self: center;
     padding: 32px;
     gap: 120px;
+    animation: appear 5s linear;
   }
   .frame-9{
     margin-top: 50px;
@@ -139,6 +146,10 @@ body, html {
     width: 1136px;
     height: 350px;
     border-radius: 0px 200px 200px 0px;
+    animation: appear 5s linear;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover;
     
     
   }
@@ -151,7 +162,8 @@ body, html {
     height: 350px;
     border-radius: 200px 0px 0px 200px;
     padding-left: 60px;
-    
+    animation: appear 5s linear;
+   
     
   }
   .fra-img img{
@@ -199,14 +211,18 @@ body, html {
   }
 
   .Booming{
-    max-width: 1920px;
+    background-color: #372C70; 
+    background-image: url('assets/pattern.png'); 
+    background-repeat: repeat; 
+    background-size: auto;
+    max-width:100vw;
     justify-self: center;
-    background-image: url('assets/pattern.png');
-    opacity: 1.5;
-    background: #372C70;
-    padding: 30px 240px;
+    padding: 30px 100px;
     gap: 56px;
     margin-top: 50px;
+    
+  
+   
   
   }
   .boo{
@@ -220,6 +236,7 @@ body, html {
     background: linear-gradient(90deg, #F4AE3E 40%, #FFF177 98.21%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: appear 5s linear;
 
   }
   .boo-pa{
@@ -235,12 +252,15 @@ body, html {
     -webkit-text-fill-color: transparent;
     line-height: 24px;
     padding-top: 5px;
+    animation: appear 5s linear;
   }
-
+  
   .tab-container {
     max-width: 1440px;
     margin: auto;
     padding: 20px;
+    animation: appear 5s linear;
+  
   } 
 
   .tabs {
@@ -305,6 +325,7 @@ body, html {
     height: 510px;
     border-radius: 10px;
     object-fit: contain;
+    animation: appear 5s linear;
   }
 
   .gallery-item-title {
@@ -314,6 +335,7 @@ body, html {
     font-size:32px;
     line-height: 48px;;
     color: #ffffff;
+    animation: appear 5s linear;
   }
   .gallery-text{
     font-family: "Poppins", sans-serif;
@@ -321,7 +343,8 @@ body, html {
     font-size:14px;
     line-height: 20px;
     color: #9188C1;
-    ;
+    animation: appear 5s linear;
+    
   }
   .product{
     width: 1200px;
@@ -330,6 +353,7 @@ body, html {
     justify-self: center;
     display: flex;
     overflow-x: scroll;
+    animation: appear 5s linear;
   }
   
   .pro-det{
@@ -354,6 +378,14 @@ body, html {
     padding: 10px;
     flex: none;
   }
+  .product-wrap {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto;
+    animation: appear 5s linear;
+}
 
   .product div img{
     width: 100%;
@@ -431,16 +463,20 @@ body, html {
     cursor: pointer;
     
   }
+
+  @keyframes appear{
+    from{
+    
+      transform: translatex(-100px);
+    }
+    to{
+
+      transform: translateX(0px);
+    }
+  }
   /* Responsive Design */
   @media (max-width:450px) {
-    .navbar .menu {
-      display: none;
-    }
-
-    .navbar .menu-toggle {
-      display: inline-block;
-      cursor: pointer;
-    }
+  
     .hero {
         background-image:url("assets/main-hero.png");
         width:100vw;
@@ -450,11 +486,12 @@ body, html {
         background-size: cover;
       }
       .contact-color{
-        display: none;
+        display: block;
       }
       img.lo {
         width: 60px !important;
         margin-top: -20px !important;
+        margin-bottom: 20px;
     }
     .frame {
       width: 100vw;
@@ -592,11 +629,316 @@ body, html {
   line-height: 14px;
 }
 .Booming {
+  background-color: #372C70; 
+  background-image: url('assets/pattern.png'); 
+  background-repeat: repeat; 
   max-width: 100vw;
   justify-self: center;
-  background-image: url(assets/pattern.png);
-  opacity: 1.5;
-  background: #372C70;
+  padding: 0px;
+  gap: 56px;
+  margin-top: 50px;
+}
+.gallery-item img {
+  width: 320px;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.product div img {
+  width: 100%;
+  height: 100px;
+}
+.product-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0px;
+    height: 300px;
+}
+.product-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  text-transform: uppercase;
+  line-height: 10px;
+}
+.product {
+  width: 100px;
+  height: 200px;
+  padding-right: 100px;
+  justify-self: center;
+  display: flex;
+  flex-flow: column;
+  overflow-x: scroll;
+}
+  
+.product div {
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+
+
+
+.key{
+  max-width:100vw;
+  justify-self: center;
+}
+.why-invest{
+  justify-self: center;
+  width:100vw;
+      
+}
+.footer {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 0px;
+}
+footer h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+#backBtn, #nextBtn {
+  width: 30px;
+  cursor: pointer;
+  margin: 40px;
+}
+.copy {
+  border-top: solid 1px #9188C1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0px;
+  gap: 8px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+}
+#backBtn, #nextBtn {
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px !important;
+  border-bottom: 1px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.menu-toggle {
+  display: block;
+}
+    
+.contact-color {
+  background-color: #372C70;
+  border-radius: 40px;
+  padding: 8px 10px;
+  gap: 8px;
+}
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #faca0c;
+  position: absolute;
+  padding-bottom: 20px;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+
+  }
+   
+
+  @media (min-width: 700px) and (max-width:1440px) {
+   
+  
+    .hero {
+        background-image:url("assets/main-hero.png");
+        width:100vw;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      img.lo {
+        width: 60px !important;
+        margin-top: -20px !important;
+    }
+    .frame {
+      width: 100vw;
+      justify-self: center;
+      padding: 32px 0px;
+      gap: 120px;
+  }
+    .fra-txt {
+      width: 628px;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      color: #ffffff;
+  }
+
+    .why{
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-size: 18px !important;
+      line-height: 80px;
+      letter-spacing: 0px !important;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #372C70 -1.68%, #5441AD 100.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .morem {
+      margin-top: -32px;
+      width: 321px;
+      justify-self: center;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #141617;
+      line-height: 18px;
+  }
+  
+  .frame-9 {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-self: center;
+      background-color: #372C70;
+      width: 560px;
+      height: 250px;
+      border-radius: 20px;
+
+}
+.frame-10{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 560px;
+  height: 250px;
+  border-radius: 20px;
+  padding: 0px;
+}
+.fra-img img {
+    margin-top: -56px;
+    width: 170px;
+}
+.fra-img-10 img {
+  margin-top: -56px;
+  width: 170px;
+  margin-left: 0px;
+  padding-left: 360px;
+}
+.fra-head {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0;
+}
+.fra-para {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 14px;
+}
+  
+.fra-txt-10 {
+  width: 680px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.boo {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #F4AE3E 40%, #FFF177 98.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boo-pa{
+  margin-top: -40px;
+  width: 321px;
+      justify-self: center;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+}
+.tabs{
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+.tab-container {
+  max-width: 100vw;
+  margin: auto;
+  justify-self: center;
+  padding: 20px;
+}
+.gallery-item-title {
+  padding: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 14px;
+  color: #ffffff;
+}
+.gallery-text {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.Booming {
+  background-color: #372C70; 
+  background-image: url('assets/pattern.png'); 
+  background-repeat: repeat; 
+  max-width: 100vw;
+  justify-self: center;
   padding: 0px;
   gap: 56px;
   margin-top: 50px;
@@ -659,6 +1001,7 @@ body, html {
   flex-wrap: wrap;
   justify-content: start;
   margin-left: 0px;
+  padding-left: 10px;
 }
 footer h1 {
   color: #ffffff;
@@ -679,7 +1022,7 @@ footer h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px;
+  padding: 10px;
   margin: 0px;
   gap: 8px;
   color: #ffffff;
@@ -690,65 +1033,55 @@ footer h1 {
 }
   }
    
-
-  @media (min-width: 700px) and (max-width:1440px) {
-   
-    .why{
-      font-size: 38px;
-    }
-    .morem {
-      margin-top: -32px;
-      width: 450px;
-      justify-self: center;
-      text-align: center;
-      font-family: "Poppins", sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      color: #141617;
-      line-height: 24px;
+  
+@media (min-width: 769px) {
+  .navbar .menu-toggle {
+    display: none;
   }
+}
+@media (max-width:768px){
 
-  .frame-9 {
-    margin-top: 50px;
+  .navbar {
     display: flex;
-    justify-self: center;
-    background-color: #372C70;
-    width: 850px;
-    height: 300px;
-    border-radius: 0px 200px 200px 0px;
-}
-.fra-img img {
-  margin-top: -60px;
-  width: 350px;
-}
-
-.frame-10{
-  width: 780px;
-  height: 300px;
-}
-.fra-img-10 img{
-  margin-top: -60px;
-  width: 350px;
-  margin-left: 0px;
-}
-
-.fra-head {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 0;
-}
-.fra-para {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-}
-
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px !important;
+    border-bottom: 1px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
   }
-  @media (min-width: 769px) {
-    .navbar .menu-toggle {
-      display: none;
-    }
+  .menu-toggle {
+    display: block;
+  }
+      
+  .contact-color {
+    background-color: #372C70;
+    border-radius: 40px;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #faca0c;
+    position: absolute;
+    padding-bottom: 20px;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+  }
+  
 }
